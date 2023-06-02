@@ -9,34 +9,23 @@ import { identity } from 'rxjs';
 export class HomeComponent {
 public color="text-primary";
 public con=true;
-public data= [
-   {
-    name:'aaaa',
-    id:1,
-  },
-  {
-    name:'bbbb',
-    id:2,
-  },
-  {
-    name:'cccc',
-    id:3,
-  },
-  {
-    name:'dddd',
-    id:4,
-  },
-  {
-    name:'eeee',
-    id:5,
-  } ,
-  {
-    name:'ffff',
-    id:6,
-  },
-  {
-    name:'gggg',
-    id:7,
-  },
+public data1 = true;
+public data2 = [
+  {name: 'nnnn',
+id:3},{name: 'nnnn',
+id:3},{name: 'nnnn',
+id:3}
 ]
+
+
+public constructer() {
+  this.fun1();
+}
+
+public fun1() {
+  alert ('fun1');
+}
+public  fun2() {
+  alert('fun2');
+}
 }

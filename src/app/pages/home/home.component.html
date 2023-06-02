@@ -4,9 +4,13 @@
 <!-- <div>{{data}}</div> -->
 <p class="{{con?color:'text-scondary'}}"> hi!</p>
 <ul>
-    <li *ngFor="let data of data" >
+    <li *ngFor="let data of data2" >
         <span class="mr-3">{{data.id}}</span>
         <span>{{data.name}}</span>
     </li>
-    hgfhg
 </ul>
+
+<h1 *ngIf="data1">h1111111111</h1>
+<p *ngIf="!data1">ppppppppppp</p>
+
+<button (click)="fun2()">submit</button>

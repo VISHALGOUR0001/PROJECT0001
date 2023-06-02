@@ -1,5 +1,12 @@
 <p>home works!</p>
 <div routerLink="/about">go to about</div>
 <img src="assets/images/home/placeimg_640_480_any.png" alt="test img">
-<div>{{data}}</div>
+<!-- <div>{{data}}</div> -->
 <p class="{{con?color:'text-scondary'}}"> hi!</p>
+<ul>
+    <li *ngFor="let data of data" >
+        <span class="mr-3">{{data.id}}</span>
+        <span>{{data.name}}</span>
+    </li>
+    hgfhg
+</ul>

@@ -1,4 +1,4 @@
-<!-- Button trigger modal -->
+<<!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
     Launch demo modal
   </button>
@@ -25,11 +25,55 @@
 
 
   <!-- card start -->
-  <div class="card mt-5" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+  <div class="container">
+    <div class="product">
+  <div class="card col-ig-4 col-md-6 col-sm-12" style="width:20rem" *ngFor="let product of products">
+    <img src="assets/images/home/i.jpg" class="card-img-top" alt="...">
     <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+      <h5 class=" CARD">GANESH JI PIC</h5>
+      <p class="card-text">₹1200000000</p>
+      <a href="#" class="btn btn-primary">ADD TO CARD</a>
+      <a href="#" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+        (click)="getproductdetail(product)">
+        PROJUCT DETAIAL</a>
     </div>
   </div>
+</div>
+  <!---CARD----->
+  <!-- Button trigger modal -->
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">PRODUCT DETAILS</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="container">
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <img src="assets/images/home/i.jpg" class="img-fluid rounded-start" alt="...">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">GANESH JI PIC</h5>
+                <P class="PRICE">₹1200000000000</P>
+                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>  
+
+
+ 

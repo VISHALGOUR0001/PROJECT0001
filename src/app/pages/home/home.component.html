@@ -1,7 +1,179 @@
-<p>home works!</p>
+<body>
+    <header>
+      <h1>Your Website</h1>
+      <nav>
+        <a href="#">HOME</a> |
+        <a href="#">ABOUT</a> |
+        <a href="#">CONTACT</a> |
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            SIGN UP
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">SIGN OUT</a></li>
+            <li><a class="dropdown-item" href="#">MY ACCOUN</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">CREATE NEW ACCOUNT</a></li>
+          </ul>
+        </li>
+        <a hreaf="#">ORDER</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ORDER
+          </a>
+          <ul class="dropdown-menu dropdown-menu-dark">
+            <li><a class="dropdown-item" href="#">ORDER OUT</a></li>
+            <li><a class="dropdown-item" href="#">ORDER ACCOUNT</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">ORDER NEW ACCOUNT</a></li>
+            <li>
+              <hr class="dropdown-divider">
+            </li>
+            <li><a class="dropdown-item" href="#">ORDER HISTORY</a></li></ul>
+        </li>
+      </nav>
+    </header>
+    <body>
 <div routerLink="/about">go to about</div>
-<img src="assets/images/home/placeimg_640_480_any.png" alt="test img">
-<!-- <div>{{data}}</div> -->
-<p class="{{con?color:'text-scondary'}}"> hi!</p>
-<
+<img src="/assets/images/home/john-mcarthur-X_MOr6oa4-k-unsplash.jpg" alt="test img">
 
+ 
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/Win11/Documents/projectwork/myapp/component.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    <title> html table</title>
+</head>
+<style>
+  /* CSS styles for header and footer */
+  header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  </style>
+
+ <!-- carosel start -->
+
+  <div>Some tags before</div>
+  <owl-carousel-o [options]="customOptions">
+    <ng-template carouselSlide>
+      <div>
+        <div class="image">
+          <img src="/assets/images/home/john-mcarthur-X_MOr6oa4-k-unsplash.jpg" alt="test img" width="100%">
+        </div>
+        <div class="contents">
+          <div>kdfmslkmd</div>
+        </div>
+      </div>
+     </ng-template>  
+    <ng-template carouselSlide> <img src="assets/images/home/i.jpg" alt="test img" width="100%"></ng-template>  
+    <ng-template carouselSlide><img scr="assets/image shop/caio-coelho-QRN47la37gw-unsplash.jpgSlide 3" alt="test img" width="100%"></ng-template>  
+    <ng-template carouselSlide>Slide 1</ng-template>  
+    <ng-template carouselSlide>Slide 2</ng-template>  
+    <ng-template carouselSlide>Slide 3</ng-template> 
+  </owl-carousel-o>
+  <div>Some tags after</div>
+  <!-- carousel end -->
+
+   <!--2nd start carousel-->
+   <owl-carousel-o [options]="customOptions">
+   
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide [id]="slide.id">
+        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+      </ng-template>
+    </ng-container>
+
+    -
+  </owl-carousel-o>
+  <owl-carousel-o [options]="customOptions">
+   
+    <ng-container *ngFor="let slide of slidesStore">
+      <ng-template carouselSlide [id]="slide.id">
+        <img [src]="slide.src" [alt]="slide.alt" [title]="slide.title">
+      </ng-template>
+    </ng-container>
+
+    -
+  </owl-carousel-o>
+  <!--2nd carousel end-->
+
+
+  <!--cart start-->
+  <div class="container">
+    <div class="product ">
+      <div class="card col-Ig-4 col-md-6 col-sm-12" style="width: 20rem" *ngFor="let product of products">
+        <img [src]="product.imgUrl" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">{{product.name}}</h5>
+          <p class="card-text">${{product.price}}</p>
+  
+          <a href="#" class="btn btn-primary">Add to card</a>
+          <a href="#" class="btn btn-primary ms-2" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            (click)="getProductDetail(product)">Product Details
+  
+          </a>
+        </div>
+      </div>
+    </div>
+  
+    <!--Modal-->
+  
+    <!-- Button trigger modal -->
+  
+  
+    <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+      aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">Product Details</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="card mb-3" style="max-width: 540px;" *ngIf="productDetails">
+              <div class="row g-0">
+                <div class="col-md-4">
+                  <img src="assets/images/home/i.jpg" class="img-fluid rounded-start" alt="..." style="height:100%">
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body">
+  
+                    <h5 class="card-title">{{ productDetails.name}}</h5>
+                    <p class="card-text">{{productDetails.price}}</p>
+                    <p class="card-text">
+  
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, quaerat?</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal " (click)="addToCart(productDetails)"> Add to Card</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--cart end -->
+
+
+  <footer>
+    <p>&copy; 2023 Your Website. All rights reserved.</p>
+    <p>GIT ACCOUNT:VISHALGOUR0001.</p>
+  </footer>

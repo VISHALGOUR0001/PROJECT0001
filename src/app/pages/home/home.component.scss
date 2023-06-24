@@ -1,0 +1,21 @@
+*{
+   Margin:0;
+   padding:0; 
+}
+img{
+  height: 450px;  
+  width: 800px;
+}
+.product {
+  width:50px;
+  display: flex;
+  justify-content:center ;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:20px;
+
+  .card{
+    min-width:18rem;
+  }
+
+}

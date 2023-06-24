@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "learning-angular-firebas-ca659": {
+      "hosting": {
+        "my": [
+          "learning-angular-firebas-ca659"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "learning-angular-firebas-ca659"
+  }
+}

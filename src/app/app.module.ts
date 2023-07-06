@@ -13,6 +13,7 @@ import { environment } from '../environments/environment';
 import { provideAuth,getAuth } from '@angular/fire/auth';
 import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { SigninComponent } from './pages/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     HomeComponent,
     AboutComponent,
     ComponentsComponent,
-    NavbarComponent
+    NavbarComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

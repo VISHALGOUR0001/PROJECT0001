@@ -21,7 +21,7 @@ export class AboutComponent {
       console.log(productsResponse);
     }
     )
-  }
+  } 
 }
 
 

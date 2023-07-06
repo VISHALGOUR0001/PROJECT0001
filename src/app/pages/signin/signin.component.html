@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  
+</head>
+<body>
+  <div class="container">
+    <h1>Sign In</h1>
+    <div class="button-container">
+         <!--form SIGN UP-->
+  <form id="signup-form">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required><br>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required><br>
+    <button type="submit"><i class="bi bi-cart-plus-fill"></i>Sign Up</button>
+
+  </form>
+  
+      <button class="google" onclick="googleSignIn()">
+        <img src="google-logo.png" alt="Google Logo">
+        Sign in with Google
+      </button>
+      <button class="microsoft" onclick="microsoftSignIn()">
+        <img src="microsoft-logo.png" alt="Microsoft Logo">
+        Sign in with Microsoft
+      </button>
+      <button class="yahoo" onclick="yahooSignIn()">
+        <img src="yahoo-logo.png" alt="Yahoo Logo">
+        Sign in with Yahoo
+      </button>
+    </div>
+  </div>
+  
+  
+  <script>
+// Initialize Firebase
+var firebaseConfig = {
+    apiKey: "YOUR_FIREBASE_API_KEY",
+    authDomain: "YOUR_FIREBASE_AUTH_DOMAIN",
+    projectId: "YOUR_FIREBASE_PROJECT_ID",
+    // Add other necessary configuration values
+  };
+  
+  firebase.initializeApp(firebaseConfig);
+  
+  
+  // Google sign-in
+  function googleSignIn() {
+    var provider = new firebase.auth.GoogleAuthProvider();
+  
+    firebase.auth().signInWithPopup(provider)
+      .then(function(result) {
+        // Successful sign-in
+        var user = result.user;
+        console.log("Signed in with Google:", user);
+      })
+      .catch(function(error) {
+        // Handle errors
+        console.error("Google sign-in error:", error);
+      });
+  }
+  
+  // Yahoo sign-in
+  function yahooSignIn() {
+    var provider = new firebase.auth.OAuthProvider('yahoo.com');
+  
+    firebase.auth().signInWithPopup(provider)
+      .then(function(result) {
+        // Successful sign-in
+        var user = result.user;
+        console.log("Signed in with Yahoo:", user);
+      })
+      .catch(function(error) {
+        // Handle errors
+        console.error("Yahoo sign-in error:", error);
+      });
+  }
+  
+  // Microsoft sign-in
+  function microsoftSignIn() {
+    var provider = new firebase.auth.OAuthProvider('microsoft.com');
+  
+    firebase.auth().signInWithPopup(provider)
+      .then(function(result) {
+        // Successful sign-in
+        var user = result.user;
+        console.log("Signed in with Microsoft:", user);
+      })
+      .catch(function(error) {
+        // Handle errors
+        console.error("Microsoft sign-in error:", error);
+      });
+  }
+ </script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-auth.js"></script>
+  <script src="firebase-config.js"></script>
+</body>
+</html>
+

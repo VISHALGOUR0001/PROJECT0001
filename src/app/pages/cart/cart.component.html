@@ -1,0 +1,15 @@
+
+<div class="container">
+    <ul>
+      <li *ngFor="let product of data">
+        <h2>{{ product.name }}</h2>
+        <P>{{ product.description }}</P
+        ><P>{{ product.price }}</P>
+      </li>
+    </ul>
+  
+    <button class="btn btn-light"  routerLink="/Order"> Proceed to Order</button>
+    <button class="btn btn-light"  routerLink="/payments"> Proceed to Payments</button>
+  </div> 
+    
+   
